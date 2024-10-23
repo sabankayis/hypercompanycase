@@ -1,0 +1,37 @@
+
+<div class="sectionDiv">
+    <div class="form">
+    <h2 class="title">One</h2>
+    
+        <form #addForm="ngForm" (ngSubmit)="save(addForm)" autocomplete="off">
+          <div class="field">
+            <input name="name" [(ngModel)] ="addModel.name" required minlength="3" type="text" placeholder="Personel Adı">
+          </div>
+          <div class="field">
+            <input name="email" [(ngModel)] ="addModel.email" email required minlength="3" type="text" placeholder="deneme@gmail.com">
+          </div>
+          <div class="field">
+            <select name="profession" [(ngModel)] ="addModel.profession" required>
+              <option selected disabled>Seçiniz...</option>
+              <option>Muhasebe</option>
+              <option>Finans</option>
+              <option>Yazılım</option>
+            </select>
+          </div>
+          <div class="field">
+            <input name="phoneNumber" [(ngModel)] ="addModel.phoneNumber"  required type="text" placeholder="05395512878">
+          </div>
+          <div class="btnDiv field">
+            <button type="reset" class="btn" [disabled]="isModelEmpty()" [ngClass]="isModelEmpty() ? 'btn-inactive':'btn-active'" (click)="cancel(addForm)">Reset Button</button>
+            <button class="btn" [disabled]="!addForm.valid" [ngClass]="!addForm.valid ? 'btn-inactive' : 'btn-active'">Submit Button</button>
+          </div>
+        </form>
+        <!-- <li *ngFor="let item of employees" class="li-style">
+          {{item.name}}
+          {{item.email}}
+          {{item.phoneNumber}}
+          {{item.profession}}
+        </li> -->
+      </div>
+</div>
+<router-outlet></router-outlet>

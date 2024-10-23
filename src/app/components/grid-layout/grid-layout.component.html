@@ -1,0 +1,9 @@
+<div class="grid-container">
+  <div class="item1"><app-header [backgroundColor]="headerBackgroundColor"></app-header></div>
+  <div class="item2">
+    <div class="padding"><app-menu (colorChange)="onColorChange($event)" class="menu"></app-menu></div>
+  </div>
+  <div class="item3"><router-outlet /></div>
+  <div class="item4"><app-sidebar class="sidebar"></app-sidebar></div>
+  <div class="item5"><app-footer [backgroundColor]="footerBackgroundColor"></app-footer></div>
+</div>

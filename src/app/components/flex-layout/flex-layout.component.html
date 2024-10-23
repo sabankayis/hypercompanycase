@@ -1,0 +1,9 @@
+<app-header  [backgroundColor]="headerBackgroundColor" ></app-header>
+<div class="hcontainer">
+    <div class="container">
+        <app-menu (colorChange)="onColorChange($event)"  class="menu"></app-menu>
+        <router-outlet />
+    </div>
+    <app-sidebar class="sidebar"></app-sidebar>
+</div>
+<app-footer [backgroundColor]="footerBackgroundColor"></app-footer>

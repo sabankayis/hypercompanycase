@@ -1,0 +1,230 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Iphone XS yoktu browserda Iphone XR ye göre yaptım. */
+/* Flex */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  margin: 0;
+  padding: 0;
+  background-color: pink;
+}
+
+.hcontainer {
+  display: flex;
+  justify-content: center;
+  border-left: 3px solid black;
+}
+
+.container {
+  display: flex;
+  flex: 80%;
+  padding: 2% 14%;
+}
+
+.menu {
+  flex: 20%;
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  color: white;
+  background-color: palevioletred;
+  cursor: pointer;
+}
+
+.sidebar {
+  background-color: #53C1E6;
+  flex: 20%;
+  border: 3px solid black;
+  border-bottom: 0px;
+  border-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 453px;
+}
+
+.header {
+  border: 3px solid black;
+  text-align: center;
+  background-color: yellow;
+}
+
+.footer {
+  border: 3px solid black;
+  text-align: center;
+  background-color: #32E651;
+}
+
+.section {
+  flex: 80%;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  background: blue;
+  color: white;
+}
+
+.field {
+  margin-top: 25px;
+}
+
+.form {
+  margin-left: 5%;
+
+}
+
+input[type=text],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 3px 0;
+  display: inline-block;
+  border: 3px solid black;
+  box-sizing: border-box;
+}
+
+.btnDiv {
+  display: flex;
+}
+
+.btn {
+  width: 100%;
+  background-color: #b6c9cf;
+  color: black;
+  padding: 14px 20px;
+  margin: 3px 21px;
+  border: none;
+  cursor: pointer;
+  border: 3px solid black;
+}
+
+.btn:hover {
+  background-color: #72b8ce;
+}
+
+.btn-inactive {
+  width: 100%;
+  background-color: rgb(117, 116, 116);
+  color: rgb(73, 73, 73);
+  padding: 14px 20px;
+  margin: 3px 21px;
+  border: none;
+  cursor: auto;
+}
+
+.btn-inactive:hover {
+  background-color: rgb(117, 116, 116);
+}
+
+.list {
+  text-align: center;
+}
+
+/* Grid */
+.item1 {
+  grid-area: header;
+}
+
+.item2 {
+  grid-area: menu;
+}
+
+.item3 {
+  grid-area: main;
+
+}
+
+.item4 {
+  grid-area: right;
+}
+
+.item5 {
+  grid-area: footer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main main  right'
+    'footer footer footer footer footer footer';
+  column-gap: 50px;
+  grid-template-rows: auto 1fr auto; /* Header, content, footer sırası */
+  min-height: 100vh; /* Sayfanın tamamını kapsa */
+}
+
+.grid-container>div {
+  text-align: center;
+}
+
+.padding {
+  padding-left: 100px;
+  margin-top: 20px;
+}
+
+.sectionDiv1 {
+  width: 92%;
+  margin-top: 20px;
+}
+
+
+
+/* Responsive design layoutFlex (Iphone XS yoktu Bende Iphone XR ye göre yaptım.) */
+
+@media screen and (max-width: 700px) {
+
+  .sidebar,
+  .menu {
+    display: none;
+  }
+
+  .container {
+    padding: 2% 0%;
+    overflow: scroll;
+  }
+
+  .hcontainer {
+    min-height: 748px;
+  }
+
+  .form {
+    margin: 2px 10px;
+  }
+
+  .section {
+    flex: 100%;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      'header header'
+      'main'
+      'footer';
+  }
+
+  .padding {
+    padding-left: 0px;
+  }
+
+  .sectionDiv1 {
+    width: 100%;
+  }
+
+  .li-style {
+    list-style: none;
+    padding: 11px;
+    border: 3px solid black;
+    margin-top: 4px;
+  }
+}
